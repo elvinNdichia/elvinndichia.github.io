@@ -1,0 +1,297 @@
+/* 
+    author: Ndichia Elvin 
+    email: elvinpascal19@gmail.com
+    start date: 10/11/2020 at ~ 8:00 am
+    use: help in implementing material designs without using a library or framework
+    Copyright: All rights reserved
+
+*/
+
+
+
+
+/* typography */
+
+.body1{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.body2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.h1{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 112px;
+    letter-spacing: -1.5px;
+}
+
+.h2{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+}
+ 
+
+.h3{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0px;
+}
+
+.h4{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+}
+
+.h5{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+}
+.h6{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.subtitle1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+}
+
+.subtitle2{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.10000000149011612px;
+}
+
+.buttonText{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.caption{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4000000059604645px;
+}  
+
+.overline{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+}
+
+
+
+/* end typography*/
+
+ 
+
+
+/* elevation */
+
+.elevation1{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* end elevation */
+
+
+
+
+/* color */
+
+:root {
+    
+    --blue: #2196f3;
+    --blue-light: #6ec6ff;
+    --blue-dark: #0069c0; /*  white text */
+
+    /* Default colors */
+    --primary: #6f00ff; /* white text */
+    --primary-dark: #3700b3; /* white text */  
+    --primary-light: #7f39fb;
+    --secondary: #03dac5 ; 
+    --secondary-dark: #018787;
+    --secondary-light: #c8fff4;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --error: #b00020; /* white text */
+
+
+    /* Do not change these colors */
+    --high-emphasis-white: rgba(255,255,255,.87);
+    --medium-emphasis-white: rgba(255,255,255,.60);
+    --disabled-white: rgba(255,255,255,.38);
+    --high-emphasis-black: rgba(0,0,0,.87);
+    --medium-emphasis-black: rgba(0,0,0,.60);
+    --disabled-black: rgba(0,0,0,.38);
+    --hover: rgba(0,0,0,.04);
+    --focus: rgba(0,0,0,.12);
+    --pressed: rgba(0,0,0,.10);
+    --selected: rgba(0,0,0,.08); 
+    --dragged: rgba(0,0,0,.8); 
+    --hover-on-dark: rgba(255,255,255,.04);
+    --focus-on-dark: rgba(255,255,255,.12);
+    --pressed-on-dark: rgba(255,255,255,.10);
+    --selected-on-dark: rgba(255,255,255,.08); 
+    --dragged-on-dark: rgba(255,255,255,.8); 
+    --hover-bright-bg: rgba(255,255,255,.08);
+    --focus-bright-bg: rgba(255,255,255,.24);
+    --pressed-bright-bg: rgba(255,255,255,.16);
+    --selected-bright-bg: rgba(255,255,255,.16); 
+    --dragged-bright-bg: rgba(255,255,255,.16); 
+        
+        
+    /* Default colors end */
+
+    
+    /* Elevation variables */
+
+
+    --elvation1dp: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    --elevation2dp:  0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+    --elevation3dp: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+    --elevation4dp: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 1px 10px rgba(0, 0, 0, 0.2);
+    --elevation6dp: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+    --elevation8dp: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.2);
+    --elevation9dp: 0px 9px 12px rgba(0, 0, 0, 0.14), 0px 3px 16px rgba(0, 0, 0, 0.12), 0px 5px 6px rgba(0, 0, 0, 0.2);
+    --elevation12dp: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+    --elevation16dp: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+    --elevation24dp: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+
+    /* Elevation variables end */
+}
+
+
+
+/* Default for all pages to look good */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+
+    /* Removing the tap highlight */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* components */
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    border-radius: inherit;
+}
+
+
+/*
+.overlay:hover{
+     background-color: var(--hover); add this line only on desktops; 
+}
+*/
+.overlay:active{
+    background-color: var(--pressed);
+}
+
+.navOverlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    border-radius: inherit;
+    display: none;
+}
+
+
+
+
+
+
+/* button */
+
+.button{
+    padding: 16px;
+    position: relative;
+    border: none;
+    outline: none;
+    background: #eee;
+    border-radius: 4px;
+}
+
+
+
