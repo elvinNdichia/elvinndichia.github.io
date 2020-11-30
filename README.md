@@ -1,2 +1,2 @@
-#FreeCodeCamp projects
-A repository for my freeCodeCamp projects
+# FreeCodeCamp projects
+### Repository for my FreeCodeCamp projects
