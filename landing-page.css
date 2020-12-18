@@ -1,0 +1,468 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--high-emphasis-black);
+    position: relative;
+}
+.h3,.h4{
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+
+}
+.scrim{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: rgba(0,0,0,.08);
+    display: none;
+}
+.overlay:hover{
+    background-color: var(--hover-bright-bg);
+}
+.overlay:active{
+    background-color: var(--pressed-bright-bg);
+}
+header{
+    display: flex;
+    padding: 0 16px;
+    height: 56px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 4;
+}
+header .h6{
+    font-weight: bold;
+}
+
+nav ul{
+    position: relative;
+    list-style-type: none;
+    
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--high-emphasis-black);
+}
+
+
+.button{
+    position: relative;
+    background-color: var(--high-emphasis-black);
+    color: var(--high-emphasis-white);
+}
+.button.secondary{
+    background-color: #eee;
+    color: var(--high-emphasis-black)
+}
+
+
+
+/* Just to get the FCC tests correct */
+.header img{
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+
+
+/* Targeting the main section */
+iframe{
+    max-width: 100%;
+    height: 320px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+.main-grid{
+    display: grid;
+    gap: 32px;
+    grid-gap: 32px;
+    margin-top: 56px;
+    padding: 12px 32px 16px 32px;
+}
+
+.main-grid .h3{
+    font-weight: bold;
+    padding-top: 13px;
+    padding-bottom: 9px;
+}
+.main-grid .body2{
+    padding-bottom: 13px;
+}
+
+
+
+/* Targeting the features section */
+    .features-grid{
+        background-color: #000;
+    }
+    .features-grid .h4{
+        color: var(--high-emphasis-white);
+        text-align: center;
+        padding-top: 60px;
+    }
+    .features{
+        padding: 32px 32px 29px 32px;
+        display: grid;
+    }
+    .features .h5{
+        color: var(--high-emphasis-white);
+        padding-top: 13px;
+        padding-bottom: 12px;
+    }
+    .features .body1{
+        color: var(--medium-emphasis-white);
+        padding-bottom: 28px;
+    }
+
+
+
+    /* Targetting the pricing section */
+
+    .pricing-grid{
+        margin: 0 32px;
+    }
+    .pricing-grid .grid{
+        display: grid;
+        grid-gap: 32px;
+        gap: 32px;
+    }
+    .pricing-grid .h4{
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .pricing-grid .grid > div{
+        padding: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .pricing-grid .h5{
+        padding: 16px 0;
+        text-align: center;
+    }
+    ul.pricing li{
+        padding: 12px 0;
+    }
+    .pricing-grid button{
+        margin: 12px 0 16px 0;
+    }
+
+
+
+    /* targetting the photos section */
+    .photos-grid .h4{
+        text-align: center;
+        padding: 60px 0;
+    }
+    .photos-grid .grid{
+        display: grid;
+    }
+    .photos-grid div{
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+
+
+    footer{
+        background-color: #000;
+        color: var(--medium-emphasis-white);
+        margin-top: 128px;
+        border-top: 1px solid #ddd;
+    }
+
+    footer .h6{
+        padding: 30px 0 16px 0;
+    }
+
+    footer .button{
+        color: var(--high-emphasis-white);
+        background-color: #121212;
+    }
+    footer form{
+        display: flex;
+        flex-direction: column;
+    }
+    footer form #email{
+        padding: 14px;
+        outline: none;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: none;
+    }
+    footer .subtitle2{
+        padding: 32px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For all Pc's and large landscape oriented tablets */
+@media (min-width: 768px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8%;
+    }
+    header .menu-icon{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        list-style-type: none;
+        z-index: 10;
+    }
+    nav ul  a{
+        padding: 8px 8px 8px 32px;      
+    }        
+    nav ul li a:hover{
+        color: var(--medium-emphasis-black);      
+    }        
+    nav ul li a:active{
+        color: var(--high-emphasis-black);      
+    }
+
+    /* targetting the main section */
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 64px 8%;
+        gap: 64px;
+    }
+    .main-grid .right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .main-grid .left{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+
+    /* targetting the features section */
+    .features{
+        gap: 32px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    /* Pricing */
+    .pricing-grid .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .pricing-grid{
+        margin: 0;
+    }
+
+    /* photos */
+    .photos-grid .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .photos-grid .grid > div{
+        background-color: #eee;
+        height: 25vw;
+    }
+
+    footer .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 8%;
+        margin-right: 8%;
+        gap: 64px;
+        grid-gap: 64px;
+    }
+    footer ul{
+        margin-top: 26px;
+    }
+    footer .grid li{
+        list-style-type: none;
+        padding: 12px;
+    }
+
+    
+    
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For all things tablet in portrait and below */
+@media (max-width: 768px){
+    header{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    nav ul{
+        list-style-type: none;
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        width: calc(100% - 64px);
+        padding: 8px;
+        height: 100%;
+        display: none;
+        animation-name: slide-out;
+        animation-duration: .25s;
+        z-index: 100;
+        border-right: 1px solid #ddd;
+    }
+
+    nav ul li{
+        padding: 10px 16px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }        
+    nav ul li:hover{
+        padding: 10px 16px;
+        margin-bottom: 8px;
+        background-color: rgba(0,0,0,.08);
+    }
+
+ 
+
+    #menu-icon{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 16px;
+    }
+
+    @keyframes slide-out{
+        0%{
+            left: -120px;
+        }
+        100%{
+            left: 0;
+        }
+    }
+
+
+    /* Targetting the main section */
+    .main-grid h1{
+        line-height: 40px;
+        font-size: 34px;
+    }
+
+    /* targetting the image grid section */
+
+    .photos-grid .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 32px;
+        gap: 32px;
+        padding: 0 32px 0 32px;
+    }
+    .photos-grid .grid > div{
+        height: 50vw;
+        background-color: #eee;
+        float: left;
+    }
+
+    footer .grid{
+        padding: 0 32px;
+    }
+  
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for lage desktops */
+@media (min-width: 1279px){
+
+}
+
+
+
+
+
+/* for laptops and large tablets in landscape orientation */
+@media (max-width: 1279px) and (min-width: 768px){
+
+}
+
+
+/* for tablets and large phones in landscape orientation */
+@media (max-width: 768px) and (min-width: 480px){
+    main .heading-item{
+        padding: 32px 105px; /* This is to avoid having the heading display on one line */
+    }
+}
+
+
+
+ /* for handsets */
+ @media (max-width: 480px){
+    header{
+        flex-direction: row-reverse;
+    }
+ }

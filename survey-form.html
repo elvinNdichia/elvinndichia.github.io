@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftCoffee survey</title>
+    <link rel="stylesheet" href="./succinct.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#442c2e">
+    <style>
+        body{
+            --secondary: #feeaeb;
+            --primary: #442c2e; /* rgb equivalent is rgb(68, 44, 46) */
+            --dark-text-high: rgba(68,44,46,.87);
+            --dark-text-medium: rgba(68,44,46,.60);
+
+
+
+            font-family: Rubik, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--primary);
+        }
+
+
+
+        .responsive-wrapper{
+            padding: 0 32px;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+        header{
+            display: block;
+            background-color: var(--primary);
+            text-align: center;
+            
+        }
+        header .responsive-wrapper{
+            padding-top: 32px;
+            padding-bottom: 128px;
+        }
+        header .h5{
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--high-emphasis-white);
+        }
+        header .subtitle1{
+            color: var(--medium-emphasis-white);
+        }
+
+
+        main .responsive-wrapper{
+            margin-top: -80px;
+            padding: 28px 32px 16px 32px;
+            background-color: #fff;
+            box-shadow: var(--elevation2dp);
+            border-radius: 8px 8px 0 0;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea{
+            padding: 16px;
+            margin-bottom: 16px;
+            outline: none;
+            border: 1px solid var(--dark-text-medium);
+            border-radius: 4px;
+        }
+        form input:focus, form textarea{
+            border: 1px solid var(--dark-text-high);
+        }
+        
+        form label, form h6{
+            padding: 12px 0;
+        }
+        form .button{
+            background-color: var(--secondary);
+            box-shadow: var(--elevation2dp);
+        }
+
+
+        form select{
+            padding: 16px;
+            font-size: 14px;
+            outline: none;
+            border: 1px solid var(--dark-text-medium);
+            border-radius: 4px;
+            background-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        /* For the radio buttons */
+        .overlay:active{
+            background: rgba(0,0,0,.08);
+            z-index: -1;
+        }
+
+        .radio-label{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+        .radio-label input{
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .custom-radio{
+            position: relative;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+
+        }
+
+        .custom-radio:before{
+            display: none;
+            content: "";
+            width: 14px;
+            height: 14px;
+            background-color: var(--primary);
+            position: absolute;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+        }
+        .radio-label input:checked + div::before{
+            display: inline-block;
+        }
+
+        .radio-container label{
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .radio-container .body1{
+            margin-left: 8px;
+        }
+
+
+
+        .overlay:hover{
+            background: rgba(0,0,0,.08);
+        }
+        .overlay:active{
+            background: rgba(0,0,0,.1);
+            z-index: -1;
+        }
+
+
+        /* For the checkboxes */
+        
+        .custom-checkbox-container{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 50%;
+        }
+        .checkbox-container label{
+        display: flex;
+        align-items: center;
+        }
+        .checkbox-container .body1{
+        margin-left: 8px;
+        }
+        .checkbox-container .custom-checkbox{
+        width: 22px;
+        height: 22px;
+        border-radius: 2px;
+        border: 2px solid var(--primary);
+        background-color: #fff;
+        position: relative;
+        }
+
+        .checkbox-container input{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        }
+
+        .checkbox-container .custom-checkbox:after{
+        content: "";
+        width: 12px;
+        height: 6px;
+        border-bottom: 2px solid var(--primary);
+        border-left: 2px solid  var(--primary);
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        transform: rotate(-45deg);
+        display: none;
+        }
+        .checkbox-container input:checked + .custom-checkbox:after{
+        display: block;
+        }
+
+
+        
+        
+    </style>
+</head> 
+<body> 
+    <!-- Whenever you see an element which does not match with its class name... eg h1.h5, it is for accessibility and SEO. The class names are for styling and the element tags are for screen readers and bots -->
+    <header>
+        <div class="responsive-wrapper">
+            <h1 class="h5" id="title">SoftCoffee Survey</h1>
+            <p class="subtitle1" id="description">
+                Thank you for taking the time to help us improve the platform
+            </p>
+        </div>
+    </header>
+    <main>
+        <div class="responsive-wrapper">
+            <form action="" id="survey-form">
+                <label for="name"id="name-label" class="caption">Name</label>
+                <input type="text" id="name" name="name" placeholder="Insert your name" required>
+                <label for="email"id="email-label" class="caption">Email</label>
+                <input type="email" id="email" name="email" placeholder="Insert your email" required>
+                <label for="number" id="number-label" class="caption">Age (Optional)</label>
+                <input type="number" name="number" placeholder="Insert your age" id="number" min="10" max="200">
+                <label for="dropdown" class="caption">What is your current role?</label>
+                <select id="dropdown" name="role">
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full time job</option>
+                    <option value="full-time-learner">Full time learner</option>
+                    <option value="other">Other</option>
+                </select>
+
+
+                <h6 class="caption">Would you recommend SoftCoffee to anybody?</h6>
+                <div class="radio-container">
+                    <label for="yes">
+                    <div class="wrap-radio">
+                    <div class="radio-label" name="recommend">
+                      <input type="radio" id="yes" name="check" value="yes" checked>
+                      <div class="custom-radio">
+                      </div> 
+                      <span class="overlay"></span>
+                    </div>
+                    </div>
+                    <p class="body1">Yes</p>
+                  </label>
+                </div>
+                <div class="radio-container">
+                    <label for="maybe">
+                    <div class="wrap-radio">
+                    <div class="radio-label" name="recommend">
+                      <input type="radio" id="maybe" name="check" value="maybe">
+                      <div class="custom-radio">
+                      </div> 
+                      <span class="overlay"></span>
+                    </div>
+                    </div>
+                    <p class="body1">Maybe</p>
+                  </label>
+                </div>
+                <div class="radio-container">
+                    <label for="no">
+                    <div class="wrap-radio">
+                    <div class="radio-label" name="recommend">
+                      <input type="radio" id="no" value="no"name="check">
+                      <div class="custom-radio">
+                      </div> 
+                      <span class="overlay"></span>
+                    </div>
+                    </div>
+                    <p class="body1">No<p>
+                  </label>
+                </div>
+
+                <h6 class="caption">What would you love to see improved on our next versions?</h6>
+                <div class="checkbox-container">
+                    <label for="documentation">
+                      <div class="custom-checkbox-container">
+                        <input type="checkbox" id="documentation" value="documentation" checked>
+                         <div class="custom-checkbox"></div>
+                         <span class="overlay"></span>
+                      </div>
+                      <p class="body1">Documentation</p>
+                    </label>
+                  </div>
+                  </label>
+                <div class="checkbox-container">
+                    <label for="customization">
+                      <div class="custom-checkbox-container">
+                        <input type="checkbox" id="customization" value="documentation">
+                         <div class="custom-checkbox"></div>
+                         <span class="overlay"></span>
+                      </div>
+                      <p class="body1">Customization</p>
+                    </label>
+                  </div>
+                  </label>
+                <div class="checkbox-container">
+                    <label for="challenges">
+                      <div class="custom-checkbox-container">
+                        <input type="checkbox" id="challenges" value="documentation">
+                         <div class="custom-checkbox"></div>
+                         <span class="overlay"></span>
+                      </div>
+                      <p class="body1">Challenges</p>
+                    </label>
+                  </div>
+                  </label>
+                <div class="checkbox-container">
+                    <label for="data-visualization">
+                      <div class="custom-checkbox-container">
+                        <input type="checkbox" id="data-visualization" value="documentation">
+                         <div class="custom-checkbox"></div>
+                         <span class="overlay"></span>
+                      </div>
+                      <p class="body1">Data visualization</p>
+                    </label>
+                  </div>
+                  </label>
+
+
+                <h6 class="caption">Any comments or suggestions?</h6>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+
+                <button type="submit" id="submit" class="button">SUBMIT<span class="overlay"></span></button>
+            </form>
+        </div>
+    </main>
+
+
+
+    
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>

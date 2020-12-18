@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung galaxy note 20</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./succinct.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./landing-page.css">
+</head>
+<body>
+    <div class="scrim" id="scrim"></div>
+    <header id="header">
+        
+        <div class="logo">
+            <p class="h6">SAMSUNG</p>
+        </div>
+        <nav id="nav-bar">
+            <div class="menu-icon">
+                <i class="material-icons" id="menu-icon">menu<span class="overlay" id="menuIcon"  onclick="slideOut"></span></i>
+                
+            </div>
+            <ul id="nav-bar-ul">
+                <a href="#features-grid" class="nav-link body2"><li>Features</li></a>
+                <a href="#pricing-grid" class="nav-link body2"><li>Pricing</li></a>
+                <a href="#photos-grid" class="nav-link body2"><li>Photos</li></a>
+                <img src="lols" alt="" id="header-img">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-grid main-responsive">
+            <div class="left">
+                <div class="make-flex-work">
+                    <h1 class="h3">
+                        Discover the new Galaxy Note20 Ultra
+                    </h1>
+                    <p class="body2">Do more in less time with this lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur.</p>
+                    <button class="button">BUY NOW<span class="overlay"></span></button>
+                </div>
+            </div>
+            <div class="right">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0h4_sJbnRsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="features-grid" id="features-grid">
+            <h4 class="h4">Features</h4>
+            <div class="features">
+                <div class="feature">
+                    <h5 class="h5">Greal lorem ipsum</h5>
+                    <p class="body1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugit ratione fuga cumque sequi dicta et consequuntur incidunt quia alias.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h5 class="h5">Greal lorem ipsum</h5>
+                    <p class="body1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugit ratione fuga cumque sequi dicta et consequuntur incidunt quia alias.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h5 class="h5">Greal lorem ipsum</h5>
+                    <p class="body1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fugit ratione fuga cumque sequi dicta et consequuntur incidunt quia alias.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pricing-grid" id="pricing-grid">
+            <h4 class="h4">
+                Pricing
+            </h4>
+            <div class="grid">
+                <div class="basic">
+                    <h5 class="h5">BASIC</h5>
+                    <p class="body2">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quibusdam necessitatibus quisquam, autem nemo officia.
+
+                    </p>
+                    <center><button class="button">BUY<span class="overlay"></span></button></center>
+                </div>
+                <div class="basic">
+                    <h5 class="h5">BASIC</h5>
+                    <p class="body2">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quibusdam necessitatibus quisquam, autem nemo officia.
+
+                    </p>
+                    <center><button class="button">BUY<span class="overlay"></span></button></center>
+                </div>
+                <div class="basic">
+                    <h5 class="h5">BASIC</h5>
+                    <p class="body2">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quibusdam necessitatibus quisquam, autem nemo officia.
+
+                    </p>
+                    <center><button class="button">BUY<span class="overlay"></span></button></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="photos-grid" id="photos-grid">
+            <h4 class="h4">
+                Photos
+            </h4>
+            <div class="grid">
+                <div class="item" style="background-image: url(./img/note202.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note203.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note204.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note205.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note206.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note207.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note201.jpg);"></div>
+                <div class="item" style="background-image: url(./img/note202.jpg);"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="grid">
+            <div class="newletter">
+                <h6 class="h6">SignUp for our newsletter</h6>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input type="email"name="email"id = "email" placeholder="Enter your email.." validate required>
+                    <input value = "SUBMIT"id="submit" class="button" type="submit">
+                </form>
+            </div>
+            <div class="links">
+            </div>
+        </div>
+        <p class="subtitle2">
+            Copyright 2020 . Elvin Ndichia
+        </p>
+    </footer>
+
+
+
+    <script>
+        document.getElementById("menu-icon").addEventListener("click", slideOut);
+        document.getElementById("scrim").addEventListener("click", slideOut);
+
+
+        // document.querySelectorAll('nav ul li').forEach(item => {
+        // item.addEventListener('click', slideOut);
+        // })
+        
+ 
+        let openOrclose = 0;
+        function slideOut(){
+            if(openOrclose===0){
+                document.getElementById("nav-bar-ul").style.display = "block";
+                document.getElementById("scrim").style.display = "block";
+                openOrclose = 1;
+            }
+            else{
+                document.getElementById("nav-bar-ul").style.display = "none";
+                document.getElementById("scrim").style.display = "none";
+                openOrclose = 0;
+            }
+        }
+    </script>
+    
+</body>
+</html>

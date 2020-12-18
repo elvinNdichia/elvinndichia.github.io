@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsapp-desktop</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./succinct.css">
+    <link rel="stylesheet" href="./whatsapp-desktop.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="header-grid">
+            <div class="left">
+                <div class="avatar-holder">
+                    <div class="avatar">
+                        <span class="overlay"></span>
+                    </div>
+                </div>
+                <div class="icons-holder">
+                    <i class="material-icons">record_voice_over<span class="overlay"></span></i>
+                    <i class="material-icons">add<span class="overlay"></span></i>
+                    <i class="material-icons">more_horiz<span class="overlay"></span></i>
+                </div>
+            </div>
+            <div class="center">
+                <div class="top-center-grid">
+                    <div class="current-avatar">
+                        <div class="avatar">
+                            <span class="overlay"></span>
+                        </div>
+                    </div>
+                    <div class="current-info">
+                        <div class="just-for-flex-to-work">
+                            <h6 class="subtitle1">Mary</h6>
+                            <p class="subtitle1">Last seen at 09:13 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-grid">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="material-icons">close<span class="overlay"></span></i>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h6 class="h6">Contact info</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aside-left">
+       <div class="messages-overview">
+           <div class="message">
+               <div class="avatar-container">
+                   <div class="avatar"></div>
+               </div>
+               <div class="details-container">
+                   <div class="person-and-time">
+                       <h5 class="h6 person">Mary</h5>
+                       <h6 class="subtitle1 time">10:36 AM</h6>
+                   </div>
+                   <p class="body1">Lorem ipsum dolor sit, amet consectetur.</p>
+               </div>
+               <span class="overlay"></span>
+           </div>
+           <div class="message">
+               <div class="avatar-container">
+                   <div class="avatar" style="background-image: url(./img/avatars/woman4.jpg);"></div>
+               </div>
+               <div class="details-container">
+                   <div class="person-and-time">
+                       <h5 class="h6 person">Gigi OMG!</h5>
+                       <h6 class="subtitle1 time">10:36 AM</h6>
+                   </div>
+                   <p class="body1">Lorem ipsum dolor sit, amet consectetur.</p>
+               </div>
+               <span class="overlay"></span>
+           </div>
+           <div class="message">
+               <div class="avatar-container">
+                   <div class="avatar" style="background-image: url(./img/avatars/man1.jpg);"></div>
+               </div>
+               <div class="details-container">
+                   <div class="person-and-time">
+                       <h5 class="h6 person">Chris Dickson</h5>
+                       <h6 class="subtitle1 time">04:26 AM</h6>
+                   </div>
+                   <p class="body1">Lorem, ipsum.</p>
+               </div>
+               <span class="overlay"></span>
+           </div>
+           <div class="message">
+               <div class="avatar-container">
+                   <div class="avatar" style="background-image: url(./img/avatars/man5.jpg);"></div>
+               </div>
+               <div class="details-container">
+                   <div class="person-and-time">
+                       <h5 class="h6 person">Dan Mantoff</h5>
+                       <h6 class="subtitle1 time">12:00 AM</h6>
+                   </div>
+                   <p class="body1">Lorem ipsum sit, amet consectetur.</p>
+               </div>
+               <span class="overlay"></span>
+           </div>
+       </div>
+    </div>
+    <div class="center">
+         <div class="chat-content">
+             <div class="message-group info">
+                 <p class="subtitle1">
+                     YESTERDAY
+                 </p>
+             </div>
+             <div class="message-group info warning">
+                 <p class="subtitle1">
+                     Messages are end-to-end encrypted
+                 </p>
+             </div>
+             <div class="message-group recieved">
+                 <div class="message">
+                    <p class="body1">Hello Elvin</p>
+                    <p class="caption">22:10</p>
+                 </div>
+             </div>
+             <div class="message-group recieved">
+                 <div class="message">
+                    <p class="body1">Do you remember me? We just chatted on Twitter</p>
+                    <p class="caption">22:10</p>
+                 </div>
+             </div>
+             <div class="message-group sent">
+                 <div class="message">
+                    <p class="body1">Hi. Yes I do</p>
+                    <p class="caption">22:10</p>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <div class="aside-right">
+        
+    </div>
+    <div class="mini-footer">
+        <div class="icon-holder">
+            <div class="icon"><i class="material-icons">sentiment_satisfied_alt<span class="overlay"></span></i></div>
+        </div>
+        <div class="icon-holder">
+            <div class="icon"><i class="material-icons">attachment<span class="overlay"></span></i></div>
+        </div>
+        <div class="message-input-holder">
+            <input type="text" placeholder="Type a message">
+        </div>
+        <div class="icon-holder">
+            <div class="icon"><i class="material-icons">mic<span class="overlay"></span></i></div>
+        </div>
+    </div>
+    <div class="desktop-only">
+        <style>
+            .desktop-only{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .message-container{
+                padding: 28px 32px;
+                color: var(--medium-emphasis-black);
+                border: 1px solid #ddd;
+                text-align: center;
+                margin: 0 16px;
+                max-width: 400px;
+            }
+            @media (min-width: 1050px){
+                .desktop-only{
+                    display: none;
+                }
+            }
+            @media (max-width: 1049px){
+                .topbar,.aside-left,.center,.aside-right,.mini-footer{
+                    display: none;
+                }
+            }
+        </style>
+        <div class="message-container">
+            <p class="body1">Sorry. This app is only available on devices with widths > 1050px</p>
+        </div>
+    </div>
+</body>
+</html>
